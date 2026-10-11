@@ -316,3 +316,23 @@ class PretrainedTrainer_250ep_TumorRegionContrastive(PretrainedTrainer_250ep):
             f"contrastive={np.round(contrastive_loss_here, decimals=4)} "
             f"weighted_contrastive={np.round(self.contrastive_weight * contrastive_loss_here, decimals=4)}"
         )
+
+
+class PretrainedTrainer_250ep_TumorRegionContrastiveS4W0p03(
+    PretrainedTrainer_250ep_TumorRegionContrastive
+):
+    contrastive_stage_index = 4
+    contrastive_weight = 0.03
+
+class PretrainedTrainer_250ep_TumorRegionContrastiveS4W0p003(
+    PretrainedTrainer_250ep_TumorRegionContrastive
+):
+    contrastive_stage_index = 4
+    contrastive_weight = 0.003
+
+
+class PretrainedTrainer_250ep_TumorRegionContrastiveS4W0p000(
+    PretrainedTrainer_250ep_TumorRegionContrastive
+):
+    contrastive_stage_index = 4
+    contrastive_weight = 0.0
